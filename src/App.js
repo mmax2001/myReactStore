@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import './styles.css';
+import { ItemListContainer } from "./components/container/ItemListContainer";
+import { Component } from 'react';
+import { NavBar } from './components/NavBar/NavBar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return ( <
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <
+        div className = 'contenedorGrid' >
+        <
+        div className = ''
+        header > < NavBar > < /NavBar></div >
+        <
+        div className = 'mainPersonal' > < ItemListContainer greeting = "Hola Coders!" / > < /div> {
+            /* <NavBar className='header'></NavBar>
+                    <ItemListContainer className='mainPersonal' greeting="Hola Coders!"/> */
+        } <
+        /div> <
+        />
+    );
 }
 
 export default App;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15mm" height="15mm" version="1.1" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="a" x1="107.03" x2="120.56" y1="139.24" y2="139.24" gradientTransform="translate(-106.24 -131.63)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#fff" offset="0"/>
+<stop stop-color="#fff" stop-opacity="0" offset="1"/>
+</linearGradient>
+</defs>
+<g stroke="#000">
+<path transform="matrix(.041467 0 0 .041467 -16.586 -12.253)" d="m580 600-103.92-60v-120l103.92-60 103.92 60v120z"/>
+<path d="m7.4649 4.7486-2.4756 1.4307-0.0225 2.903 2.4531 1.4723 2.4756-1.4308 0.0225-2.9029z" fill="#fff" stroke-width=".049293"/>
+<path d="m7.4649 5.5779-1.7956 1.0367v2.0734l1.7956 1.0367 1.7956-1.0367v-2.0734z" stroke-width=".041467"/>
+<ellipse cx="7.556" cy="7.6085" rx="6.6414" ry="6.9513" fill="url(#a)" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".2" style="mix-blend-mode:color-burn"/>
+</g>
+</svg>

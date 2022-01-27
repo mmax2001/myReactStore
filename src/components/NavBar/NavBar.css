@@ -1,0 +1,25 @@
+.header {
+    width: 100%;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-navbar {
+    grid-area: header;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.header-link-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
