@@ -1,23 +1,20 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './styles.css';
-import { ItemListContainer } from "./components/container/ItemListContainer";
+import {ItemListContainer} from "./components/container/ItemListContainer";
 import { NavBar } from './components/NavBar/NavBar';
 
 function App() {
-    return ( <
-        >
-        <
-        div className = 'contenedorGrid' >
-        <
-        div className = 'header' > < NavBar > < /NavBar></div >
-        <
-        div className = 'mainPersonal' > < ItemListContainer greeting = "Hola Coders!" / > < /div> {
-            /* <NavBar className='header'></NavBar>
-                    <ItemListContainer className='mainPersonal' greeting="Hola Coders!"/> */
-        } <
-        /div> <
-        />
-    );
+  return (
+    <>
+      <div className='contenedorGrid'>
+        <div className='header'><NavBar></NavBar></div>
+        <div className='mainPersonal'><ItemListContainer greeting="Hola Coders!"/></div>
+        {/* <NavBar className='header'></NavBar>
+        <ItemListContainer className='mainPersonal' greeting="Hola Coders!"/> */}
+      </div>
+    </>
+  );
 }
 
 export default App;

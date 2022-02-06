@@ -12,7 +12,7 @@ export const NavBar=()=>{
                 <p className="header-link-button">Section1</p>
                 <p className="header-link-button">Section2</p>
                 <p className="header-link-button">Section3</p>
-                <div style={{fontSize:"1.5em"}}>             
+                <div style={{fontSize:"1.3em" ,marginBottom:"15px"}}>             
                     <FontAwesomeIcon icon={faShoppingCart} />
                 </div>
             </nav>
