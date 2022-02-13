@@ -1,4 +1,5 @@
 import { Button,Card } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 export const Item =({nombre,precio,id,image,cantidad,stock})=>{
     return(
@@ -7,14 +8,16 @@ export const Item =({nombre,precio,id,image,cantidad,stock})=>{
             <Card.Body>
                 <Card.Title>{nombre}</Card.Title>
                 <Card.Text>
-                    <span>{precio}</span>
+                    <span>Precio : ${precio}</span>
                     <p>Cantidad</p>                    
                 </Card.Text>
                 <Card.Text>
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                 </Card.Text>
-                <Button variant="primary">Agregar al carrito</Button>
+                <Link to={`/item/${id}`}>
+                    <Button variant="primary">Ver detalles</Button>              
+                </Link>
             </Card.Body>
         </Card>
     )

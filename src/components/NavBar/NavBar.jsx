@@ -1,17 +1,21 @@
 import logo from './dibujoLogo.svg'
 import './NavBar.css'
+import { Link } from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 
 export const NavBar=()=>{
     return(
         <header className="header">
-            <img src={logo} class Name="App-logo" alt="logo" />
+            <Link to="/">
+                <img src={logo} class Name="App-logo" alt="logo" />
+            </Link>
             <h1>Bitba</h1>
             <nav className="header-navbar">
-                <p className="header-link-button">Section1</p>
-                <p className="header-link-button">Section2</p>
-                <p className="header-link-button">Section3</p>
+                <Link to="/productos/cables" className="header-link-button">Cables</Link>
+                <Link to="/productos/adaptadores"className="header-link-button">Adaptadores</Link>
+                <Link to="/productos/fuentes" className="header-link-button">Fuentes</Link>
+                <Link to="/productos/rigs"className="header-link-button">Rigs</Link>
                 <div style={{fontSize:"1.3em" ,marginBottom:"15px"}}>             
                     <FontAwesomeIcon icon={faShoppingCart} />
                 </div>
