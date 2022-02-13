@@ -1,0 +1,7 @@
+cardStyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    min-height: 100%;
+}
