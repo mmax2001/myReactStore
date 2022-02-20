@@ -18,7 +18,7 @@ export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(false)
     const {catID} = useParams()
-
+    console.log("El id de categoria es ",catID)
     useEffect( () => {
         setLoading(true)
 
@@ -26,6 +26,7 @@ export const ItemListContainer = () => {
             .then((res) => {
                 if(catID){
                     setProductos( res.filter((element)=>element.categoria===catID) )
+                    console.log(setProductos)
                 }else{
                     setProductos(res)
                 }
@@ -41,11 +42,13 @@ export const ItemListContainer = () => {
 
     return (
         <>
+        <div className="itemStyles">
             {
                 loading 
                     ? <h2>Cargando productos...</h2>
-                    : <ItemList productos={productos}/>
+                    : <ItemList productos={productos} className="itemStyles"/>
             } 
+        </div>
         </>
     )
 }

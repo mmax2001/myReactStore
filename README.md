@@ -1,3 +1,9 @@
+# App desarrollada en React
+Esta app consiste en una tienda virtual en la cual el usuario
+puede seleccionar productos y elegir la cantidad correspondiente, 
+para luego ir al icono "carrito" donde podra pasar a la instancia 
+final de compra del producto
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

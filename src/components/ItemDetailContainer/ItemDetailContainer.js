@@ -3,6 +3,8 @@ import { loaderData } from "../../loaderData/loaderData";
 import { useEffect ,useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+import "./ItemDetailContainer.css"
+import  Container from "react-bootstrap/Container";
 
 export const ItemDetailContainer =() => {
 
@@ -14,23 +16,33 @@ export const ItemDetailContainer =() => {
         setLoading(true)
 
         loaderData()
+            
             .then((res)=>{
-                setItem(res.find((element)=> element.id===parseInt(itemID)))
                 
+                let lastItem=res[res.length-1]
+                console.log(lastItem.id)
+                if(itemID<=Number(9)){
+                    setItem( res.find((element)=> element.id===parseInt(itemID)) )
+                }else{
+                    setItem(res)
+                }
+
             })
             .finally(()=>{
                 setLoading(false)
             })
 
-    },[])
+    },[itemID])
     
     return (
         <div>
+            <Container style={{marginLeft:'650px',marginTop:'20px'}}>
             {
                 loading 
                     ? <h2>Cargando producto...</h2>
-                    : <ItemDetail {...item}/>
+                    : <ItemDetail {...item} />
             }
+            </Container>
         </div>
     )
 };

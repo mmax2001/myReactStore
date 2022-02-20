@@ -1,6 +1,7 @@
 import logo from './dibujoLogo.svg'
 import './NavBar.css'
 import { Link } from 'react-router-dom'
+import { CartWidget } from '../cartWidget/CartWidget'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 
@@ -16,9 +17,10 @@ export const NavBar=()=>{
                 <Link to="/productos/adaptadores"className="header-link-button">Adaptadores</Link>
                 <Link to="/productos/fuentes" className="header-link-button">Fuentes</Link>
                 <Link to="/productos/rigs"className="header-link-button">Rigs</Link>
-                <div style={{fontSize:"1.3em" ,marginBottom:"15px"}}>             
+                <CartWidget></CartWidget>  
+                {/* <div style={{fontSize:"1.3em" ,marginBottom:"15px"}}>             
                     <FontAwesomeIcon icon={faShoppingCart} />
-                </div>
+                </div> */}
             </nav>
         </header>
     )
