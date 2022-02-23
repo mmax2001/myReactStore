@@ -7,7 +7,7 @@ export const productStock = [
         categoria: "cables",
         imagen: require('../images/cablecpupcie.jpg'),
         descrip: "Adaptador para ficha macho CPU de 8 pines a ficha pcie 6+2 pines hembra",
-        cantidad: 0,
+        cantidadMin: 3,
         stock: 20,
         vendido: "false",
         valorTotal: 0
@@ -20,7 +20,7 @@ export const productStock = [
         categoria: "adaptadores",
         imagen: require('../images/riserpcie.jpg'),
         descrip: "Riser version 009S incluye cable de alimentacion sata y de datos usb 3.0",
-        cantidad: 0,
+        cantidadMin: 0,
         stock: 20,
         vendido: "false",
         valorTotal: 0
@@ -33,7 +33,7 @@ export const productStock = [
         categoria: "adaptadores",
         imagen: require('../images/risermulti.jpg'),
         descrip: "Adaptador pcie 1x a cuatro slots 16x con alimentacion molex 4 pines",
-        cantidad: 0,
+        cantidadMin: 0,
         stock: 20,
         vendido: "false",
         valorTotal: 0
@@ -46,7 +46,7 @@ export const productStock = [
         categoria: "adaptadores",
         imagen: require('../images/breakOut.jpg'),
         descrip: "Boton de encendido,display de voltaje y conector de encendido sincronizado",
-        cantidad: 0,
+        cantidadMin: 0,
         stock: 20,
         vendido: "false",
         valorTotal: 0
@@ -59,7 +59,7 @@ export const productStock = [
         categoria: "fuentes",
         imagen: require('../images/fuente1400W.jpg'),
         descrip: "Fuente servidor clase 80 plus platinum no incluye cables ni breakout",
-        cantidad: 0,
+        cantidadMin: 0,
         stock: 20,
         vendido: "false",
         valorTotal: 0
@@ -72,7 +72,7 @@ export const productStock = [
         categoria: "rigs",
         imagen: require('../images/rig5GPUs.jpg'),
         descrip: "Rig apto para 5 gpus, estructura en aluminio perfil Bosch 20x20",
-        cantidad: 0,
+        cantidadMin: 0,
         stock: 20,
         vendido: "false",
         valorTotal: 0
@@ -85,7 +85,7 @@ export const productStock = [
         categoria: "rigs",
         imagen: require('../images/rigCompleto.jpg'),
         descrip: "Rig completo 7 gpus, incluye placas nVidia 3060,fuente y motherboard",
-        cantidad: 0,
+        cantidadMin: 0,
         stock: 20,
         vendido: "false",
         valorTotal: 0
@@ -98,7 +98,7 @@ export const productStock = [
         categoria: "rigs",
         imagen: require('../images/rigCompleto.jpg'),
         descrip: "Rig completo 7 gpus, incluye placas nVidia 3070,fuente y motherboard",
-        cantidad: 0,
+        cantidadMin: 0,
         stock: 20,
         vendido: "false",
         valorTotal: 0
@@ -111,7 +111,7 @@ export const productStock = [
         categoria: "rigs",
         imagen: require('../images/rigCompleto.jpg'),
         descrip: "Rig completo 7 gpus, incluye placas nVidia 3080,fuente y motherboard",
-        cantidad: 0,
+        cantidadMin: 0,
         stock: 20,
         vendido: "false",
         valorTotal: 0

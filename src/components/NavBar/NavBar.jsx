@@ -1,9 +1,9 @@
 import logo from './dibujoLogo.svg'
-import './NavBar.css'
 import { Link } from 'react-router-dom'
 import { CartWidget } from '../cartWidget/CartWidget'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
+import './NavBar.css'
 
 export const NavBar=()=>{
     return(
@@ -11,7 +11,9 @@ export const NavBar=()=>{
             <Link to="/">
                 <img src={logo} class Name="App-logo" alt="logo" />
             </Link>
-            <h1>Bitba</h1>
+            <Link to="/" style={{textDecoration:"none"}}>
+                <h1>Bitba</h1>
+            </Link>
             <nav className="header-navbar">
                 <Link to="/productos/cables" className="header-link-button">Cables</Link>
                 <Link to="/productos/adaptadores"className="header-link-button">Adaptadores</Link>

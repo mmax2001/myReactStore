@@ -1,6 +1,11 @@
+h1 {
+    color: black;
+}
+
 .header {
     width: 100%;
-    background-color: dodgerblue;
+    /* background-color: dodgerblue; */
+    background-image: linear-gradient(62deg, #c2c7c9 0%, #8e9eab 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;

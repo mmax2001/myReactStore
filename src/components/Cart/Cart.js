@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { Button } from "react-bootstrap"
 import { CartContext } from "../../context/CartContext"
-import {BsCartDash} from "react-icons/bs"
+import { BsCartDash } from "react-icons/bs"
 
 export const Cart=()=>{
     

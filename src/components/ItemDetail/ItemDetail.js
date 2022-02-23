@@ -1,17 +1,19 @@
-import { useState ,useContext } from "react"
-import { Button,Card } from "react-bootstrap"
-import { Link,Navigate } from "react-router-dom"
+
+import { useState,useContext } from "react"
 import { ItemCounter } from "../ItemCounter/ItemCounter"
 import { CartContext } from "../../context/CartContext"
+import { Button,Card } from "react-bootstrap"
+import { Link} from "react-router-dom";
 import './ItemDetail.css'
 
-export const ItemDetail=({nombre,precio,id,categoria,imagen,descrip,stock})=>{
+export const ItemDetail=({nombre,precio,id,categoria,imagen,descrip,cantidadMin,stock})=>{
     
-    const [cantidad,setCantidad]=useState(0)
-
+    const [cantidad,setCantidad]=useState(cantidadMin)    
+    
     const {cartBuy,addToBuyCart,isInCart}=useContext(CartContext)
     console.log(cartBuy)
 
+    //agrego al carrito el item
     const handleAddToCart=()=>{
         if (cantidad===0) return
 
@@ -27,30 +29,42 @@ export const ItemDetail=({nombre,precio,id,categoria,imagen,descrip,stock})=>{
     
     
     
+    
     return (
-        <div style={{justifyContent:"center"}}>            
+        <div style={{justifyContent:"center"}}>
+           
             <Card style={{ width: '35rem'}} className="cardStyle">
             <Card.Img variant="top" src={imagen} />
             <Card.Body>
                 <Card.Title>{nombre}</Card.Title>
                 <Card.Text>
                     <span>Precio : ${precio}</span>
-                    <ItemCounter max={stock} counter={cantidad} setCounter={setCantidad}></ItemCounter>                
+                    <ItemCounter max={stock} min={cantidadMin} counter={cantidad} setCounter={setCantidad}></ItemCounter>                    
                 </Card.Text>
-                <p>Descripcion :</p>
+                <p>Descripcion</p>
                 <Card.Text>{descrip}</Card.Text>
-                <Link>Ir al carrito</Link>
-                <Button onClick={handleAddToCart}>Agregar al carrito</Button>            
+                {/* <Link>Ir al carrito</Link>             */}
+                            
                 {
                     isInCart(id)?
-                    <Link>Ir al carrito</Link>
+                    <Link to="/cart">
+                        <Button className="my-2">
+                            Ir al carrito    
+                        </Button>                                                
+                    </Link>
                     :
                     <>
                         <Button onClick={handleAddToCart}>Agregar al carrito</Button>
                     </>
                 }
+                <span>  </span>
+                        <Link to="/">                        
+                            <Button className="my-2">
+                                Volver a la tienda    
+                            </Button>     
+                        </Link>
             </Card.Body>
-            </Card> 
+            </Card>
         </div>
     )
 }
