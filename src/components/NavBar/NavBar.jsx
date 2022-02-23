@@ -9,7 +9,7 @@ export const NavBar=()=>{
     return(
         <header className="header">
             <Link to="/">
-                <img src={logo} class Name="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo" />
             </Link>
             <Link to="/" style={{textDecoration:"none"}}>
                 <h1>Bitba</h1>
