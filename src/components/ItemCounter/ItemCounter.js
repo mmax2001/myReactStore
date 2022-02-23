@@ -1,7 +1,7 @@
 
 import { Button } from "react-bootstrap";
 
-export const ItemCounter =({max,min=0,counter,setCounter})=>{
+export const ItemCounter =({max,min,counter,setCounter})=>{
 
     // const [counter, setCounter] = useState(0)
     const handleSumar = () => {
@@ -13,13 +13,14 @@ export const ItemCounter =({max,min=0,counter,setCounter})=>{
     }
 
     return(
-
+        <>
         <div>
             <p>Cantidad : {counter}</p>               
             <Button onClick={handleSumar}>+</Button>
             <span> Modificar cantidad </span>
             <Button onClick={handleRestar}>-</Button>
         </div>
+        </>
     )
 
 }

@@ -5,14 +5,14 @@ import { BsCartDash } from "react-icons/bs"
 
 export const Cart=()=>{
     
-    const {cart,totalItemsPrice,clearCart,removeItem}=useContext(CartContext)    
+    const {cartBuy,totalItemsPrice,clearCart,removeItem}=useContext(CartContext)    
     
     return(
         <div className="container">
             <h2>Finalizar Compra</h2>
             <hr />
             {
-                cart.map((item)=>(
+                cartBuy.map((item)=>(
 
                     <div key={item.id}>
                         <h3>{item.nombre}</h3>
