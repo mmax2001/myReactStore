@@ -7,7 +7,7 @@
         "descrip": "Adaptador para ficha macho CPU de 8 pines a ficha pcie 6+2 pines hembra",
         "cantidad": 0,
         "stock": 20,
-        "vendido": "false",
+        "ofertaVenta": "false",
         "valorTotal": 0
     },
 

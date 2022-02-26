@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
-import { loaderData } from "../../loaderData/loaderData"
+//import { loaderData } from "../../loaderData/loaderData"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import './ItemListContainer.css'
+import { databaseStore } from "../../firebase/config"
+import { collection, getDocs, query, where } from "firebase/firestore"
+//import { productStock } from "../../dataStore/prod"
 
 // export const ItemListContainer=({greeting})=>{
 //     return(
@@ -21,24 +24,43 @@ export const ItemListContainer = () => {
     console.log("El id de categoria es ",catID)
     useEffect( () => {
         setLoading(true)
+       
+        const dbReference=collection(databaseStore,"stockItems")
+        const search = catID ? query(dbReference,where("categoria","==",catID)) : dbReference 
 
-        loaderData()
+        getDocs(search)
             .then((res) => {
-                if(catID){
-                    setProductos( res.filter((element)=>element.categoria===catID) )
-                    console.log(setProductos)
-                }else{
-                    setProductos(res)
-                }
+                setProductos(res.docs.map((doc)=>{
+                    return {
+                        id:doc.id,
+                        ...doc.data()
+                    }
+                }))
             })
-            .catch((err) => {
-                console.log(err)
-            })
-            .finally(() => {
-               setLoading(false)
+            .finally(()=>{
+                setLoading(false)
             })
 
-    }, [catID])
+    },[catID])
+
+
+        // uso una promesa con un mock como base de datos
+        // loaderData()
+        //     .then((res) => {
+        //         if(catID){
+        //             setProductos( res.filter((element)=>element.categoria===catID) )
+        //             console.log(setProductos)
+        //         }else{
+        //             setProductos(res)
+        //         }
+        //     })
+        //     .catch((err) => {
+        //         console.log(err)
+        //     })
+        //     .finally(() => {
+        //        setLoading(false)
+        //     })
+        // }, [catID])
 
     return (
         <>
