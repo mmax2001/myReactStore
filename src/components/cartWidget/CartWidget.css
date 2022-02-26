@@ -1,13 +1,14 @@
 .cartWidgetStyle {
-    font-size: 30px;
+    font-size: 28px;
     color: black;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
+    bottom: 15px;
 }
 
 .wrapper {
     position: absolute;
-    top: 22px;
-    right: 5px;
+    top: 10px;
+    right: 7px;
 }
 
 .badge {

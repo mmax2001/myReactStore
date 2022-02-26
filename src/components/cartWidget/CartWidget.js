@@ -7,12 +7,18 @@ import "./CartWidget.css"
 export const CartWidget = ()=>
 {
 
-    const {totalItemsCart}=useContext(CartContext)
-    return (
-        <Link to="/cart">
-            <BsCart3 className="cartWidgetStyle"></BsCart3>
-            <span className="badge wrapper">{totalItemsCart()}</span>
-        </Link>
+    const {cartBuy,totalItemsCart}=useContext(CartContext)
+    console.log(cartBuy)
 
+    if(cartBuy.length===0){
+        return (<span></span>)
+    }
+    return (
+        <>
+            <Link to="/cart">
+                <BsCart3 className="cartWidgetStyle"></BsCart3>
+                <span className="badge wrapper">{totalItemsCart()}</span>
+            </Link>                 
+        </>
     )
 }

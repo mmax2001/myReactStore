@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-itemStyles {
+.itemStyles {
     grid-column-start: 2;
     display: flex;
     justify-content: center;

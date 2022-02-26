@@ -1,15 +1,15 @@
 import logo from './dibujoLogo.svg'
 import { Link } from 'react-router-dom'
 import { CartWidget } from '../cartWidget/CartWidget'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+// import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 import './NavBar.css'
 
 export const NavBar=()=>{
     return(
         <header className="header">
             <Link to="/">
-                <img src={logo} alt="logo" />
+                <img src={logo} alt="logo" className='logoStyle'/>
             </Link>
             <Link to="/" style={{textDecoration:"none"}}>
                 <h1>Bitba</h1>

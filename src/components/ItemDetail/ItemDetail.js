@@ -31,9 +31,9 @@ export const ItemDetail=({nombre,precio,id,categoria,imagen,descrip,cantidadMin,
     
     
     return (
-        <div style={{justifyContent:"center"}}>
+        <div style={{justifyContent:"center" ,fontSize:"14px"}}>
            
-            <Card style={{ width: '35rem'}} className="cardStyle">
+            <Card style={{ width: '24rem'}} className="cardStyle">
             <Card.Img variant="top" src={imagen} />
             <Card.Body>
                 <Card.Title>{nombre}</Card.Title>
@@ -48,18 +48,18 @@ export const ItemDetail=({nombre,precio,id,categoria,imagen,descrip,cantidadMin,
                 {
                     isInCart(id)?
                     <Link to="/cart">
-                        <Button className="my-2">
+                        <Button className="my-2" style={{ fontSize:"14px"}}>
                             Ir al carrito    
                         </Button>                                                
                     </Link>
                     :
                     <>
-                        <Button onClick={handleAddToCart}>Agregar al carrito</Button>
+                        <Button onClick={handleAddToCart} style={{ fontSize:"14px"}}>Agregar al carrito</Button>
                     </>
                 }
                 <span>  </span>
                         <Link to="/">                        
-                            <Button className="my-2">
+                            <Button style={{ fontSize:"14px"}}>
                                 Volver a la tienda    
                             </Button>     
                         </Link>

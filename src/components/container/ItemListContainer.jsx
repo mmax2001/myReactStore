@@ -45,7 +45,7 @@ export const ItemListContainer = () => {
         <div className="itemStyles">
             {
                 loading 
-                    ? <h2>Cargando productos...</h2>
+                    ? <h2 style={{fontSize:"18px"}}>Cargando productos...</h2>
                     : <ItemList productos={productos} className="itemStyles"/>
             } 
         </div>

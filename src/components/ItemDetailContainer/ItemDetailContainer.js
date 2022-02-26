@@ -36,10 +36,10 @@ export const ItemDetailContainer =() => {
     
     return (
         <div>
-            <Container style={{marginLeft:'650px',marginTop:'20px'}}>
+            <Container style={{marginLeft:'550px',marginTop:'20px'}}>
             {
                 loading 
-                    ? <h2>Cargando producto...</h2>
+                    ? <h2 style={{fontSize:"18px" }}>Cargando producto...</h2>
                     : <ItemDetail {...item} />
             }
             </Container>
