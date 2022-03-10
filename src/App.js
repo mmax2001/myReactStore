@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './styles.css';
 import { NavBar } from './components/NavBar/NavBar';
+import {Form} from './components/Form/Form.js';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                 <Route path='/productos/:catID' element={ <ItemListContainer/> }/>
                 <Route path='/item/:itemID' element={ <ItemDetailContainer/> } />
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/contacto" element={<Form/>}/>
                 <Route path="*" element={ <Navigate to ="/"/>}/>            
               </Routes>
           </div>

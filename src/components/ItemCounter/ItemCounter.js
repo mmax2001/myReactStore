@@ -15,7 +15,7 @@ export const ItemCounter =({max,min,counter,setCounter})=>{
     return(
         <>
         
-            <p>Cantidad : {counter}</p>               
+            <p>Cantidad Minima : {counter}</p>               
             <Button onClick={handleSumar}>+</Button>
             <span> Modificar cantidad </span>
             <Button onClick={handleRestar}>-</Button>

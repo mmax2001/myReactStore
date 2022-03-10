@@ -5,6 +5,12 @@ import { useParams } from "react-router-dom"
 import './ItemListContainer.css'
 import { databaseStore } from "../../firebase/config"
 import { collection, getDocs, query, where } from "firebase/firestore"
+import Lottie from "lottie-react"
+import loadBitcoinColor from '../../assets/loadBitcoinColor.json'
+
+
+
+
 //import { productStock } from "../../dataStore/prod"
 
 // export const ItemListContainer=({greeting})=>{
@@ -22,6 +28,15 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(false)
     const {catID} = useParams()
     console.log("El id de categoria es ",catID)
+    const options={
+        animationData:loadBitcoinColor,
+        autoplay:true,
+        loop:true,
+        style:{
+            width:'45%',
+        },
+    };
+
     useEffect( () => {
         setLoading(true)
        
@@ -64,11 +79,16 @@ export const ItemListContainer = () => {
 
     return (
         <>
+              
         <div className="itemStyles">
-            {
+            {   
+                
                 loading 
-                    ? <h2 style={{fontSize:"18px"}}>Cargando productos...</h2>
-                    : <ItemList productos={productos} className="itemStyles"/>
+                    ?   <div>
+                            <Lottie {...options}><code></code></Lottie>
+                            <h2 style={{fontSize:"18px",marginLeft:"60px"}}>Cargando Articulos ...</h2>
+                        </div>
+                        : <ItemList productos={productos} className="itemStyles"/>
             } 
         </div>
         </>

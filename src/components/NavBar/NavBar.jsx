@@ -19,6 +19,7 @@ export const NavBar=()=>{
                 <Link to="/productos/adaptadores"className="header-link-button">Adaptadores</Link>
                 <Link to="/productos/fuentes" className="header-link-button">Fuentes</Link>
                 <Link to="/productos/rigs"className="header-link-button">Rigs</Link>
+                <Link to="/contacto"className="header-link-button">Contacto</Link>
                 <CartWidget></CartWidget>  
                 {/* <div style={{fontSize:"1.3em" ,marginBottom:"15px"}}>             
                     <FontAwesomeIcon icon={faShoppingCart} />
