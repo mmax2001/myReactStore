@@ -6,6 +6,7 @@ import { useContext ,useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Navigate } from "react-router-dom";
 import { createOrder } from "../../firebase/createOrder";
+import { OrderCode } from "./OrderCode";
 
 export default function FormCheckOut() {
   
@@ -33,13 +34,13 @@ export default function FormCheckOut() {
 
   const [orderId, setOrderId] = useState(null)
   
-  const [formBuyer,setFormBuyer] = useState ({
-        nombre:"",
+  const [dataBuyer,setDataBuyer] = useState ({
         email:"",
         ValidateEmail:"",
+        nombre:"",
         telefono:"",        
-    });
-  
+  });
+  console.log(dataBuyer)
   // const handleInputData = (e) =>{
   //       setFormBuyer({
   //           ...formBuyer,
@@ -47,15 +48,21 @@ export default function FormCheckOut() {
   //       });
   //   };
 
-    const handleSubmit = () =>{
+  const handleSubmit = () =>{
         
-        createOrder(formBuyer, cartBuy, totalItemsPrice, setOrderId, clearCart);
-        alert("El formulario se ha enviado");
+    createOrder(dataBuyer, cartBuy, totalItemsPrice, setOrderId, clearCart);
+    alert("La orden ha sido enviada");
         
-    };
-    console.log(formBuyer)
+  };
+  console.log(dataBuyer)
 
-   if(cartBuy.length===0){
+
+  if (orderId) {
+        return <OrderCode order={orderId}/>
+  }
+
+
+  if(cartBuy.length===0){
     return <Navigate to="/"/>
   }
 
@@ -70,7 +77,9 @@ export default function FormCheckOut() {
         }}
         validationSchema={formSchema}
         onSubmit={(values) => {
-          setFormBuyer(values);
+          setDataBuyer(values)
+          console.log(values);
+          console.log(dataBuyer);
           handleSubmit();
         }}          
         
@@ -143,7 +152,7 @@ export default function FormCheckOut() {
                 className='mr-1 mb-1 btn-block'
                 type='submit'
               >
-                Finalizar
+                Enviar Orden
               </Button>
             </Col>
           </Row>

@@ -2,11 +2,12 @@ import { collection, writeBatch, getDocs, addDoc, Timestamp, query, where, docum
 import { databaseStore } from "./config.js"
 
 
-export const createOrder = async (formBuyer, cartBuy, totalItemsPrice, setOrderId, clearCart) => {
+export const createOrder = async (dataBuyer, cartBuy, totalItemsPrice, setOrderId, clearCart) => {
+    console.log(dataBuyer)
     const order = {
-        buyerInfo: formBuyer,
+        buyerInfo: dataBuyer,
         items: cartBuy,
-        total: totalItemsPrice(),
+        totalPrice: totalItemsPrice(),
         orderTime: Timestamp.fromDate(new Date())
     } 
 
