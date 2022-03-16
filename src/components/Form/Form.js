@@ -6,7 +6,8 @@ export const Form = () =>{
         nombre:"",
         apellido:"",
         email:"",
-        emailValidate:"",
+        asunto:"",
+        consulta:"",
     });
 
     const handleInputData = (e) =>{
@@ -23,8 +24,10 @@ export const Form = () =>{
     console.log(form)
     
     return(
+        <>
         <div className="my-2 container">
             <form onSubmit={handleSubmit}>
+                <h1>Contactanos</h1>
                 <label htmlFor="nombre">Nombre:</label>
                 <input
                     className="form-control my-2"
@@ -34,7 +37,7 @@ export const Form = () =>{
                     placeholder="Ingrese su nombre, por favor"
                     value={form.nombre}
                     onChange={handleInputData}
-                    style={{width:"340px"}}
+                    style={{width:"360px"}}
                 />
 
                 <label htmlFor="apellido">Apellido:</label>
@@ -46,7 +49,7 @@ export const Form = () =>{
                     placeholder="Ingrese su apellido, por favor"
                     value={form.apellido}
                     onChange={handleInputData}
-                    style={{width:"340px"}}
+                    style={{width:"360px"}}
                 />
                 <label htmlFor="email">Email:</label>
                 <input
@@ -57,26 +60,39 @@ export const Form = () =>{
                     placeholder="Ingrese su email, por favor"
                     value={form.email}
                     onChange={handleInputData}
-                    style={{width:"340px"}}
+                    style={{width:"360px"}}
                 />
-                <label htmlFor="emailValidate">Validar email:</label>
+
+                <label htmlFor="asunto">Asunto:</label>
                 <input
                     className="form-control my-2"
-                    type="email"
-                    id="emailValidate"
-                    name="emailValidate"
-                    placeholder="Ingrese su email nuevamente, por favor"
-                    value={form.emailValidate}
+                    type="text"
+                    id="asunto"
+                    name="asunto"
+                    placeholder="Ingrese aqui el asunto de su consulta, por favor"
+                    value={form.asunto}
                     onChange={handleInputData}
-                    style={{width:"340px"}}
+                    style={{width:"360px"}}
+                />
+
+                <label htmlFor="consulta">Consulta:</label>
+                <input
+                    className="form-control my-2"
+                    type="text"
+                    id="consulta"
+                    name="consulta"
+                    placeholder="Ingrese aqui su consulta, por favor"
+                    value={form.consulta}
+                    onChange={handleInputData}
+                    style={{width:"360px",height:"150px"}}
                 />
                 <button type="submit" className="my-3 btn btn-primary">
                     Enviar
                 </button>
             </form>
-
+            
         </div>
-
+        </>
     )
 
 }

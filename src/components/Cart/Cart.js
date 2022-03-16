@@ -24,15 +24,15 @@ export const Cart=()=>{
         ) 
     }   
     return(
-            <div className="container">
+            <div className="container my-5">
                 
-                <h2>Finalizar Compra</h2>
+                <h2>Listado de Compra</h2>
                     <hr />
                         {
                             cartBuy.map((item)=>(
 
                                 <div key={item.id}>
-                                    <h3 style={{fontSize:"18px" }}>{item.nombre}</h3>
+                                    <h3 style={{fontSize:"18px" }}>Producto : {item.nombre}</h3>
                                     <p>Total item : ${item.cantidad*item.precio}</p>
                                     <p>Total unidades item : {item.cantidad}</p>
                                     <Button onClick={()=>removeItem(item.id)} className="iconStyle"><BsCartDash></BsCartDash></Button>
@@ -43,10 +43,16 @@ export const Cart=()=>{
                         }
                         <hr />
                         <h3 style={{fontSize:"16px" }}>Importe total :${totalItemsPrice()}</h3>
-                        <div>
-                            <Button onClick={clearCart}>
+                        <div className="my-2">
+                            <Button className="buttonPosition" onClick={clearCart}>
                                 Vaciar Carrito
                             </Button>
+                            
+                            <Link to="/FormCheckOut" className="buttonPosition" >
+                                <Button>
+                                    Finalizar Compra
+                                </Button>
+                            </Link>
                         </div>
                     
             </div>

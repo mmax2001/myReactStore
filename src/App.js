@@ -8,7 +8,8 @@ import './App.css';
 import './styles.css';
 import { NavBar } from './components/NavBar/NavBar';
 import {Form} from './components/Form/Form.js';
-
+import { FooterBitba } from "./components/footer/footer";
+import FormCheckOut from "./components/FormCheckOut/FormCheckOut";
 
 function App() {
   
@@ -19,17 +20,19 @@ function App() {
     <CartCustomProvider>
     <>  
     <BrowserRouter>
-          <div className='contenedorGrid'>
+          {/* <div className='contenedorGrid'> */}
             <div className='header'><NavBar></NavBar></div>
               <Routes>
-                <Route path="/" element={ <div className='mainPersonal'><ItemListContainer greeting="Hola Coders!"/></div> }/>
-                <Route path='/productos/:catID' element={ <ItemListContainer/> }/>
-                <Route path='/item/:itemID' element={ <ItemDetailContainer/> } />
-                <Route path="/cart" element={<Cart/>}/>
-                <Route path="/contacto" element={<Form/>}/>
+                <Route exact path="/" element={ <div className='mainPersonal'><ItemListContainer greeting="Hola Coders!"/></div> }/>
+                <Route exact path='/productos/:catID' element={ <ItemListContainer/> }/>
+                <Route exact path='/item/:itemID' element={ <ItemDetailContainer/> } />
+                <Route exact path="/cart" element={<Cart/>}/>
+                <Route exact path="/contacto" element={<Form/>}/>
+                <Route exact path="/formCheckOut" element={<FormCheckOut/>}/>
                 <Route path="*" element={ <Navigate to ="/"/>}/>            
               </Routes>
-          </div>
+          {/* </div> */}
+          <div><FooterBitba></FooterBitba></div>
     </BrowserRouter>
     </>
     </CartCustomProvider>

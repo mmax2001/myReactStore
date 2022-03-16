@@ -38,10 +38,10 @@ export const ItemListContainer = () => {
     };
 
     useEffect( () => {
+
         setLoading(true)
-       
         const dbReference=collection(databaseStore,"stockItems")
-        const search = catID ? query(dbReference,where("categoria","==",catID)) : dbReference 
+        const search = catID ? query(dbReference.orderByValue("nombre"),where("categoria","==",catID)) : dbReference 
 
         getDocs(search)
             .then((res) => {
@@ -78,17 +78,16 @@ export const ItemListContainer = () => {
         // }, [catID])
 
     return (
-        <>
-              
-        <div className="itemStyles">
-            {   
-                
-                loading 
-                    ?   <div>
-                            <Lottie {...options}><code></code></Lottie>
-                            <h2 style={{fontSize:"18px",marginLeft:"60px"}}>Cargando Articulos ...</h2>
-                        </div>
-                        : <ItemList productos={productos} className="itemStyles"/>
+        <>              
+        {/* <div className="itemStyles"> */}
+        <div className="container my-5 itemStyles">
+            {                   
+                loading ?
+                <div>
+                    <Lottie {...options}><code></code></Lottie>
+                    <h2 style={{fontSize:"18px",marginLeft:"60px"}}>Cargando Articulos ...</h2>
+                </div>
+                : <ItemList productos={productos} className="itemStyles"/>
             } 
         </div>
         </>
