@@ -57,10 +57,10 @@ export default function FormCheckOut() {
   console.log(dataBuyer)
 
 
+  
   if (orderId) {
         return <OrderCode order={orderId}/>
   }
-
 
   if(cartBuy.length===0){
     return <Navigate to="/"/>

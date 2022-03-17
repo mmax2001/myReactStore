@@ -19,8 +19,8 @@ function App() {
     
     <CartCustomProvider>
     <>  
-    <BrowserRouter>
-          {/* <div className='contenedorGrid'> */}
+      <BrowserRouter>
+          
             <div className='header'><NavBar></NavBar></div>
               <Routes>
                 <Route exact path="/" element={ <div className='mainPersonal'><ItemListContainer greeting="Hola Coders!"/></div> }/>
@@ -31,9 +31,10 @@ function App() {
                 <Route exact path="/formCheckOut" element={<FormCheckOut/>}/>
                 <Route path="*" element={ <Navigate to ="/"/>}/>            
               </Routes>
-          {/* </div> */}
-          <div><FooterBitba></FooterBitba></div>
-    </BrowserRouter>
+          
+            <div><FooterBitba></FooterBitba></div>
+    
+      </BrowserRouter>
     </>
     </CartCustomProvider>
        

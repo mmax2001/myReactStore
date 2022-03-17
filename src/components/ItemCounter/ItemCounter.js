@@ -1,9 +1,7 @@
-
 import { Button } from "react-bootstrap";
 
 export const ItemCounter =({max,min,counter,setCounter})=>{
-
-    // const [counter, setCounter] = useState(0)
+    
     const handleSumar = () => {
         counter < max && setCounter(counter + 1)
     }

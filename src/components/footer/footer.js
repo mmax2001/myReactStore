@@ -107,10 +107,8 @@ export const FooterBitba=()=>{
             {/* <!-- Grid container --> */}
         </section>
         {/* <!-- Footer --> */}
-    </footer>
-    
+    </footer>    
     </>
 
     )
-
 }

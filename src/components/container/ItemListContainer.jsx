@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-//import { loaderData } from "../../loaderData/loaderData"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import './ItemListContainer.css'
@@ -8,19 +7,6 @@ import { collection, getDocs, query, where } from "firebase/firestore"
 import Lottie from "lottie-react"
 import loadBitcoinColor from '../../assets/loadBitcoinColor.json'
 
-
-
-
-//import { productStock } from "../../dataStore/prod"
-
-// export const ItemListContainer=({greeting})=>{
-//     return(
-//         <section>
-//             <h2>{greeting}</h2>
-//             <hr/>
-//         </section>
-//     )
-// }
 
 export const ItemListContainer = () => {
     
@@ -41,7 +27,7 @@ export const ItemListContainer = () => {
 
         setLoading(true)
         const dbReference=collection(databaseStore,"stockItems")
-        const search = catID ? query(dbReference.orderByValue("nombre"),where("categoria","==",catID)) : dbReference 
+        const search = catID ? query(dbReference,where("categoria","==",catID)) : dbReference 
 
         getDocs(search)
             .then((res) => {
@@ -59,27 +45,10 @@ export const ItemListContainer = () => {
     },[catID])
 
 
-        // uso una promesa con un mock como base de datos
-        // loaderData()
-        //     .then((res) => {
-        //         if(catID){
-        //             setProductos( res.filter((element)=>element.categoria===catID) )
-        //             console.log(setProductos)
-        //         }else{
-        //             setProductos(res)
-        //         }
-        //     })
-        //     .catch((err) => {
-        //         console.log(err)
-        //     })
-        //     .finally(() => {
-        //        setLoading(false)
-        //     })
-        // }, [catID])
 
     return (
         <>              
-        {/* <div className="itemStyles"> */}
+        
         <div className="container my-5 itemStyles">
             {                   
                 loading ?

@@ -1,4 +1,3 @@
-
 import { useState,useContext } from "react"
 import { ItemCounter } from "../ItemCounter/ItemCounter"
 import { CartContext } from "../../context/CartContext"
@@ -31,8 +30,8 @@ export const ItemDetail=({nombre,precio,id,categoria,imagen,descrip,cantidadMin,
     
     
     return (
-        <div style={{justifyContent:"center" ,fontSize:"14px"}}>
-           
+        <div style={{display:"flex",justifyContent:"center"}}>
+        
             <Card style={{ width: '24rem'}} className="cardStyle">
             <Card.Img variant="top" src={imagen} />
             <Card.Body>
@@ -43,8 +42,7 @@ export const ItemDetail=({nombre,precio,id,categoria,imagen,descrip,cantidadMin,
                 </Card.Text>
                 <p>Descripcion</p>
                 <Card.Text>{descrip}</Card.Text>
-                {/* <Link>Ir al carrito</Link>             */}
-                            
+                                            
                 {
                     isInCart(id)?
                     <Link to="/cart">
