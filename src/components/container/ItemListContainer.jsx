@@ -13,7 +13,7 @@ export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(false)
     const {catID} = useParams()
-    console.log("El id de categoria es ",catID)
+    
     const options={
         animationData:loadBitcoinColor,
         autoplay:true,
@@ -28,7 +28,7 @@ export const ItemListContainer = () => {
         setLoading(true)
         const dbReference=collection(databaseStore,"stockItems")
         const search = catID ? query(dbReference,where("categoria","==",catID)) : dbReference 
-
+         
         getDocs(search)
             .then((res) => {
                 setProductos(res.docs.map((doc)=>{

@@ -4,6 +4,7 @@ import { databaseStore } from "./config.js"
 
 export const createOrder = async (dataBuyer, cartBuy, totalItemsPrice, setOrderId, clearCart) => {
     console.log(dataBuyer)
+    console.log(cartBuy)
     const order = {
         buyerInfo: dataBuyer,
         items: cartBuy,

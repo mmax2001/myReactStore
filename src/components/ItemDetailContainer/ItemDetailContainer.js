@@ -30,6 +30,15 @@ export const ItemDetailContainer =() => {
 
     },[itemID])
     
+    
+    
+    //Control para gestionar un itemID mal ingresado el la URL
+    // if(item===[]){
+    //      return <Navigate to="/"/>
+    // }
+
+
+
     return (
         
         <Container className="my-5">

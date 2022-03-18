@@ -47,10 +47,11 @@ export default function FormCheckOut() {
   //           [e.target.name]:e.target.value,
   //       });
   //   };
-
-  const handleSubmit = () =>{
-        
-    createOrder(dataBuyer, cartBuy, totalItemsPrice, setOrderId, clearCart);
+  const values=dataBuyer
+  const handleSubmit = (values) =>{
+    console.log(cartBuy);
+    setDataBuyer(values);
+    createOrder(values, cartBuy, totalItemsPrice, setOrderId, clearCart);
     alert("La orden ha sido enviada");
         
   };
@@ -80,7 +81,7 @@ export default function FormCheckOut() {
           setDataBuyer(values)
           console.log(values);
           console.log(dataBuyer);
-          handleSubmit();
+          handleSubmit(values);
         }}          
         
       >
