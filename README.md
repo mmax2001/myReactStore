@@ -14,10 +14,10 @@ App desarrollada en Rect-JS
 
 # Instalacion
 
-Se requiere de Node.js para poder ejecutarse.
-Instalar las dependencias e iniciar el servidor.
+Se requiere primeramente de Node.js para poder ejecutarse,instalar las dependencias y luego iniciar el servidor.
 
 $ cd myappreact
+
 $ npm install
 
 Luego para clonar este repositorio debe seguir las siguientes instrucciones:
