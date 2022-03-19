@@ -2,8 +2,7 @@ import {Item} from '../Item/Item';
 
 
 export const ItemList = ( {productos} ) => {
-    console.log(productos)
-    
+        
     //Control para gestionar el mal ingreso de una categoria
     //en la URL
     // if(productos.length===0){

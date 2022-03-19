@@ -8,8 +8,7 @@ export const CartWidget = ()=>
 {
 
     const {cartBuy,totalItemsCart}=useContext(CartContext)
-    console.log(cartBuy)
-
+    
     if(cartBuy.length===0){
         return (<span></span>)
     }

@@ -40,24 +40,16 @@ export default function FormCheckOut() {
         nombre:"",
         telefono:"",        
   });
-  console.log(dataBuyer)
-  // const handleInputData = (e) =>{
-  //       setFormBuyer({
-  //           ...formBuyer,
-  //           [e.target.name]:e.target.value,
-  //       });
-  //   };
-  const values=dataBuyer
+
+  
   const handleSubmit = (values) =>{
-    console.log(cartBuy);
+    
     setDataBuyer(values);
     createOrder(values, cartBuy, totalItemsPrice, setOrderId, clearCart);
     alert("La orden ha sido enviada");
         
   };
-  console.log(dataBuyer)
-
-
+    
   
   if (orderId) {
         return <OrderCode order={orderId}/>
@@ -78,9 +70,7 @@ export default function FormCheckOut() {
         }}
         validationSchema={formSchema}
         onSubmit={(values) => {
-          setDataBuyer(values)
-          console.log(values);
-          console.log(dataBuyer);
+                 
           handleSubmit(values);
         }}          
         

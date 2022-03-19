@@ -1,7 +1,7 @@
 import { Button,Card } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
-export const Item =({nombre,precio,id,imagen,descrip,cantidad,stock})=>{
+export const Item =({nombre,precio,id,imagen})=>{
     return(
         <Card style={{ width: '15rem',fontSize:"14px" }}>
             <Card.Img variant="top" src={imagen} />
