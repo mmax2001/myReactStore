@@ -112,6 +112,10 @@ dataStore: mock o ejemplo de testeo de base de datos.
 firebase-config y firebase-createOrder: el primero gestiona el acceso a la base Firebase y el segundo genera la orden de compra con un codigo unico de orden.
 loaderData: este componente mediante el uso de promesas, se encarga de cargar la base de datos de testeo o mock de datos, en el caso de no usar una base de datos como Firebase Store.
 
+# Link a demo del sitio
+
+https://bitbastore.netlify.app/
+
 # Vistas del proyecto
 ### Seccion Home
 ![BitbaHome](https://user-images.githubusercontent.com/15664347/159096195-8551ad8f-9e44-492b-b55f-cf092201f8a7.png)
