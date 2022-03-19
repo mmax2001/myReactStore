@@ -21,7 +21,7 @@ export const ItemDetail=({nombre,precio,id,categoria,imagen,descrip,cantidadMin,
             const addItem={
                 id,nombre,precio,cantidad,stock
             }
-            console.log(addItem)
+            
             addToBuyCart(addItem)
         }
     }
