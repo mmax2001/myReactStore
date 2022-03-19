@@ -112,4 +112,21 @@ dataStore: mock o ejemplo de testeo de base de datos.
 firebase-config y firebase-createOrder: el primero gestiona el acceso a la base Firebase y el segundo genera la orden de compra con un codigo unico de orden.
 loaderData: este componente mediante el uso de promesas, se encarga de cargar la base de datos de testeo o mock de datos, en el caso de no usar una base de datos como Firebase Store.
 
-# Vista del proyecto
+# Vistas del proyecto
+### Seccion Home
+![BitbaHome](https://user-images.githubusercontent.com/15664347/159096195-8551ad8f-9e44-492b-b55f-cf092201f8a7.png)
+### Seccion Contacto
+![BitbaContacto](https://user-images.githubusercontent.com/15664347/159096333-2a6c2a45-4f4f-4544-9c89-72da81a998d1.png)
+### Seccion categoria adaptadores
+![BitbaCategoriaAdaptadores](https://user-images.githubusercontent.com/15664347/159097303-aece2502-7884-4545-a13f-b15731a9de2e.png)
+### Seccion detalle producto
+![BitbaDetallesProducto](https://user-images.githubusercontent.com/15664347/159097401-ce13f3cb-57f8-4501-bf1e-1d716f6d8e9e.png)
+### Seccion vista de carrito
+![BitbaVistaCarrito](https://user-images.githubusercontent.com/15664347/159097464-9c503c3e-a46e-4758-b1fb-e6e37a31613d.png)
+### Seccion vista finalizar compra
+![BitbaFinalizarCompra](https://user-images.githubusercontent.com/15664347/159097575-9a8ce8b8-5e15-4efa-8d8f-50c2fda228fc.png)
+### Seccion orden de compra generada
+![BitbaOrdenCompra](https://user-images.githubusercontent.com/15664347/159097632-e1da364b-f224-4306-b848-773dc5dd4cd2.png)
+
+
+
