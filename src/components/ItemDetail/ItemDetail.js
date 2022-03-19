@@ -9,7 +9,7 @@ export const ItemDetail=({nombre,precio,id,categoria,imagen,descrip,cantidadMin,
     
     const [cantidad,setCantidad]=useState(cantidadMin)    
     
-    const {cartBuy,addToBuyCart,isInCart}=useContext(CartContext)
+    const {addToBuyCart,isInCart}=useContext(CartContext)
     
 
     //agrego al carrito el item

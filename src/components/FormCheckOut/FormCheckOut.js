@@ -70,7 +70,7 @@ export default function FormCheckOut() {
         }}
         validationSchema={formSchema}
         onSubmit={(values) => {
-                 
+          setDataBuyer(dataBuyer);       
           handleSubmit(values);
         }}          
         

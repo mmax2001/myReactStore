@@ -37,7 +37,7 @@ export const FooterBitba=()=>{
 
                         {/* <!-- Grid column --> */}
                         <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                            <h6 className="text-uppercase mb-4 font-weight-bold">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
                                 Enlaces del sitio
                             </h6>
                             <p>
@@ -83,19 +83,19 @@ export const FooterBitba=()=>{
                         {/* <!-- Grid column --> */}
                         <div className="col-md-5 col-lg-4 ml-lg-0 textCenter textMdEnd">
                             {/* <!-- Telegram --> */}
-                            <a href="www.telegram.com" className="btn btnOutlineLight btnFloating m-1" className="text-white" aria-label="telegram" role="button">
+                            <a href="www.telegram.com" className="text-white" aria-label="telegram" role="button">
                                 <FaTelegram style={{fontSize:"30px",marginRight:"25px"}}/>
                             </a>
                             {/* <!-- Whatsapp --> */}
-                            <a href="www.whatsapp.com" className="btn btn-outline-light btn-floating m-1" className="text-white" aria-label="whatsapp" role="button">
+                            <a href="www.whatsapp.com" className="text-white" aria-label="whatsapp" role="button">
                                 <BsWhatsapp style={{fontSize:"30px",marginRight:"25px"}}/>
                             </a>
                             {/* <!-- Facebook --> */}
-                            <a href="www.facebook.com" className="btn btn-outline-light btn-floating m-1" className="text-white" aria-label="facebook" role="button">
+                            <a href="www.facebook.com" className="text-white" aria-label="facebook" role="button">
                                 <BsFacebook style={{fontSize:"30px",marginRight:"25px"}}/>
                             </a>
                             {/* <!-- Instagram --> */}
-                            <a href="www.instagram.com" className="btn btn-outline-light btn-floating m-1" className="text-white" aria-label="instagram" role="button">
+                            <a href="www.instagram.com" className="text-white" aria-label="instagram" role="button">
                                 <BsInstagram style={{fontSize:"30px"}}/>
                             </a> 
                         </div>
